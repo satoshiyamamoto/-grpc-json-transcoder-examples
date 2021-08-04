@@ -1,15 +1,15 @@
 syntax = "proto3";
 
-option go_package = "github.com/satoshiyamamoto/grpc-json-transcoder-example/helloworld";
-
-package helloworld.v1;
+package helloworld;
 
 import "google/api/annotations.proto";
+
+option go_package = "github.com/satoshiyamamoto/grpc-json-transcoder-example/proto/helloworld";
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {
     option (google.api.http) = {
-      get: "/v1/helloworld"
+      get: "/helloworld"
     };
   }
 }
