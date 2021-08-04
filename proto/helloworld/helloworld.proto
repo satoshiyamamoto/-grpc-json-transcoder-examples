@@ -5,6 +5,9 @@ package helloworld;
 import "google/api/annotations.proto";
 
 option go_package = "github.com/satoshiyamamoto/grpc-json-transcoder-example/proto/helloworld";
+option java_multiple_files = true;
+option java_package = "helloworld";
+option java_outer_classname = "Helloworld";
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {
